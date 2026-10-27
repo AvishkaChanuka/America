@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c485d518af113b54e9eb05cd41e2fb61, type: 3}
+  m_Name: CFG_Level_04_WorldAtWar
+  m_EditorClassIdentifier: Assembly-CSharp::AmericanBattlefront.Core.LevelConfig
+  LevelId: level_04_world_at_war
+  DisplayName: World at War (1944)
+  HistoricalPeriod: "World War II (1941\u20131945"
+  DateRange: "1941\u20131945"
+  Location: Damaged European Village, Normandy
+  ShortBriefing: Fight through rubble, sandbags, and stone obstacles with your semi-automatic
+    M1 Garand in fast-paced combat.
+  ObjectiveText: Survive 4 rapid opposing force assault waves in the village.
+  ControlHelp: 'Trigger: fire (semi-auto)  |  Grip: reload  |  Sprint between sandbags'
+  HistoricalNotes: 
+  SourceNotes: 
+  PanoramaMaterial: {fileID: 2100000, guid: b1f7bf57043698946bce25eadf3566d5, type: 2}
+  PanoramaRotation: 0
+  PanoramaExposure: 1
+  Arena:
+    ArenaPrefab: {fileID: 8000770295148407310, guid: f6ed2386aeb163343bb02f779a32a2f7, type: 3}
+    PlayerStartPosition: {x: 0, y: 0, z: 0}
+    ArenaDimensions: {x: 40, y: 40}
+  Seed: 1944
+  MaxAttemptsPerProp: 30
+  MaxTotalProps: 25
+  Props:
+  - Prefab: {fileID: 2206237709911194155, guid: 815e82f27fd3e514f9211a8620710eb9, type: 3}
+    MinCount: 3
+    MaxCount: 6
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2
+    IsNavigationStatic: 1
+  - Prefab: {fileID: 894059499511641251, guid: 6349d8f52af9e9b4eb717e175f0bd478, type: 3}
+    MinCount: 2
+    MaxCount: 5
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2
+    IsNavigationStatic: 1
+  - Prefab: {fileID: 2164954093771066801, guid: 66d0764ab8fe51b47bac6d68a20e92ee, type: 3}
+    MinCount: 3
+    MaxCount: 6
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2.5
+    IsNavigationStatic: 1
+  - Prefab: {fileID: 2039764032462755491, guid: 3dc61ea2a46562e43b58211d76ad1ab9, type: 3}
+    MinCount: 2
+    MaxCount: 5
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2
+    IsNavigationStatic: 1
+  ProtectedZones:
+  - Centre: {x: 0, y: 0, z: 0}
+    Radius: 3
+  Weapon:
+    Prefab: {fileID: 9056110576448217076, guid: 4d319132c192f314ba3c03b647aab06a, type: 3}
+    Damage: 45
+    Range: 70
+    FireInterval: 0.2
+    MagazineSize: 20
+    ReserveAmmo: 48
+    ReloadTime: 1.4
+    SpreadAngle: 0.4
+    HitLayers:
+      serializedVersion: 2
+      m_Bits: 209
+  Enemies:
+  - Prefab: {fileID: 7305952852296998276, guid: 930564d37fc49af4da3f8b5e8db8e3e8, type: 3}
+    Weight: 0
+    MaxHealth: 70
+    MoveSpeed: 3.6
+    DetectionRange: 20
+    AttackRange: 8
+    AttackDamage: 18
+    AttackCooldown: 1.4
+    RecoverDuration: 0.4
+    XPReward: 20
+    RequireLineOfSight: 0
+  Waves:
+  - TotalEnemies: 4
+    MaxAliveAtOnce: 2
+    SpawnInterval: 2
+    PreWaveDelay: 2
+  - TotalEnemies: 6
+    MaxAliveAtOnce: 4
+    SpawnInterval: 1.8
+    PreWaveDelay: 2.5
+  - TotalEnemies: 8
+    MaxAliveAtOnce: 5
+    SpawnInterval: 1.5
+    PreWaveDelay: 2.5
+  - TotalEnemies: 10
+    MaxAliveAtOnce: 7
+    SpawnInterval: 1.2
+    PreWaveDelay: 3
+  Player:
+    MaxHealth: 100
+    DamageCooldown: 0.5
+    RestoreHealthOnRestart: 1
+    RestoreAmmoOnRestart: 1
+  DefaultXPPerKill: 20
+  Restart:
+    LayoutSeedPolicy: 0
+  MaxActiveEnemies: 8

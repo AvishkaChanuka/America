@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c485d518af113b54e9eb05cd41e2fb61, type: 3}
+  m_Name: CFG_level_03_divided_nation
+  m_EditorClassIdentifier: Assembly-CSharp::AmericanBattlefront.Core.LevelConfig
+  LevelId: level_03_divided_nation
+  DisplayName: Divided Nation (1863)
+  HistoricalPeriod: "American Civil War (1861\u20131865)"
+  DateRange: "1861\u20131865"
+  Location: Cemetery Ridge, Gettysburg, Pennsylvania
+  ShortBriefing: Defend behind split-rail fences and earthworks as Confederate infantry
+    pushes across long, exposed sightlines.
+  ObjectiveText: Hold your ground against 3 heavy infantry assault waves.
+  ControlHelp: 'Trigger: fire  |  Grip: reload  |  Use earthworks for cover'
+  HistoricalNotes: 
+  SourceNotes: 
+  PanoramaMaterial: {fileID: 2100000, guid: 36fb235ef456f5246856f64b8cd402c2, type: 2}
+  PanoramaRotation: 0
+  PanoramaExposure: 1
+  Arena:
+    ArenaPrefab: {fileID: 8000770295148407310, guid: acc3d5f57554e5648a676b0d1ee93297, type: 3}
+    PlayerStartPosition: {x: 0, y: 0, z: 0}
+    ArenaDimensions: {x: 40, y: 40}
+  Seed: 1863
+  MaxAttemptsPerProp: 30
+  MaxTotalProps: 22
+  Props:
+  - Prefab: {fileID: 5496136952835126305, guid: 046f83eeeac951d4fb8938c8d78ac874, type: 3}
+    MinCount: 4
+    MaxCount: 7
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2
+    IsNavigationStatic: 1
+  - Prefab: {fileID: 4686338210350256419, guid: 1cbb5532ccf50f44ea280013842c6ae2, type: 3}
+    MinCount: 3
+    MaxCount: 5
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2.5
+    IsNavigationStatic: 1
+  - Prefab: {fileID: 2164954093771066801, guid: 66d0764ab8fe51b47bac6d68a20e92ee, type: 3}
+    MinCount: 2
+    MaxCount: 5
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2
+    IsNavigationStatic: 1
+  ProtectedZones:
+  - Centre: {x: 0, y: 0, z: 0}
+    Radius: 3
+  Weapon:
+    Prefab: {fileID: 9056110576448217076, guid: 4d319132c192f314ba3c03b647aab06a, type: 3}
+    Damage: 60
+    Range: 65
+    FireInterval: 0.5
+    MagazineSize: 20
+    ReserveAmmo: 25
+    ReloadTime: 2
+    SpreadAngle: 0.5
+    HitLayers:
+      serializedVersion: 2
+      m_Bits: 209
+  Enemies:
+  - Prefab: {fileID: 7305952852296998276, guid: 68813ce4c926e854696185f2af3b24f9, type: 3}
+    Weight: 0
+    MaxHealth: 75
+    MoveSpeed: 3.3
+    DetectionRange: 16
+    AttackRange: 7
+    AttackDamage: 20
+    AttackCooldown: 1.8
+    RecoverDuration: 0.4
+    XPReward: 18
+    RequireLineOfSight: 0
+  Waves:
+  - TotalEnemies: 5
+    MaxAliveAtOnce: 3
+    SpawnInterval: 2.8
+    PreWaveDelay: 2
+  - TotalEnemies: 8
+    MaxAliveAtOnce: 4
+    SpawnInterval: 2.2
+    PreWaveDelay: 2.5
+  - TotalEnemies: 11
+    MaxAliveAtOnce: 5
+    SpawnInterval: 1.5
+    PreWaveDelay: 3
+  Player:
+    MaxHealth: 100
+    DamageCooldown: 0.5
+    RestoreHealthOnRestart: 1
+    RestoreAmmoOnRestart: 1
+  DefaultXPPerKill: 20
+  Restart:
+    LayoutSeedPolicy: 0
+  MaxActiveEnemies: 7

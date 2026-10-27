@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c485d518af113b54e9eb05cd41e2fb61, type: 3}
+  m_Name: CFG_Level_02_AmericanRevolution
+  m_EditorClassIdentifier: Assembly-CSharp::AmericanBattlefront.Core.LevelConfig
+  LevelId: level_02_revolution
+  DisplayName: Revolution (1777)
+  HistoricalPeriod: American Revolutionary War (1775-1783)
+  DateRange: 1775-1783
+  Location: Colonial Farmstead, Saratoga, New York
+  ShortBriefing: Stand alongside the Continental Army against British regular infantry
+    in open farm fields and low stone walls.
+  ObjectiveText: Repel 3 coordinated British assault waves across open firing lanes.
+  ControlHelp: 'Trigger: fire  |  Grip: reload  |  Duck behind stone walls'
+  HistoricalNotes: 
+  SourceNotes: 
+  PanoramaMaterial: {fileID: 2100000, guid: ec40385809222624bb25ab420a71f26c, type: 2}
+  PanoramaRotation: 0
+  PanoramaExposure: 1
+  Arena:
+    ArenaPrefab: {fileID: 8000770295148407310, guid: b82f025805cc6fe4c91131b900135aa2, type: 3}
+    PlayerStartPosition: {x: 0, y: 0, z: 0}
+    ArenaDimensions: {x: 40, y: 40}
+  Seed: 777
+  MaxAttemptsPerProp: 30
+  MaxTotalProps: 20
+  Props:
+  - Prefab: {fileID: 4723680427273659790, guid: f3db91bdf8f22a24eb90ab51c3a71920, type: 3}
+    MinCount: 2
+    MaxCount: 4
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2.5
+    IsNavigationStatic: 1
+  - Prefab: {fileID: 7916277838570885790, guid: 2552c12456947da4d869b33f06ba0ffe, type: 3}
+    MinCount: 3
+    MaxCount: 6
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2
+    IsNavigationStatic: 1
+  - Prefab: {fileID: 7656566666529012303, guid: 0123f049013cda4429d2ee1dbef36cf3, type: 3}
+    MinCount: 2
+    MaxCount: 6
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2.5
+    IsNavigationStatic: 1
+  - Prefab: {fileID: 2039764032462755491, guid: 3dc61ea2a46562e43b58211d76ad1ab9, type: 3}
+    MinCount: 3
+    MaxCount: 6
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2
+    IsNavigationStatic: 1
+  ProtectedZones:
+  - Centre: {x: 0, y: 0, z: 0}
+    Radius: 3
+  Weapon:
+    Prefab: {fileID: 9056110576448217076, guid: 4d319132c192f314ba3c03b647aab06a, type: 3}
+    Damage: 35
+    Range: 50
+    FireInterval: 0.5
+    MagazineSize: 6
+    ReserveAmmo: 24
+    ReloadTime: 2.2
+    SpreadAngle: 1
+    HitLayers:
+      serializedVersion: 2
+      m_Bits: 209
+  Enemies:
+  - Prefab: {fileID: 7305952852296998276, guid: 19484cb702cdbd149927e40ea85067a7, type: 3}
+    Weight: 0
+    MaxHealth: 60
+    MoveSpeed: 3
+    DetectionRange: 12
+    AttackRange: 5
+    AttackDamage: 15
+    AttackCooldown: 1.8
+    RecoverDuration: 0.4
+    XPReward: 15
+    RequireLineOfSight: 0
+  Waves:
+  - TotalEnemies: 3
+    MaxAliveAtOnce: 2
+    SpawnInterval: 3.5
+    PreWaveDelay: 2
+  - TotalEnemies: 5
+    MaxAliveAtOnce: 3
+    SpawnInterval: 2.5
+    PreWaveDelay: 3
+  - TotalEnemies: 8
+    MaxAliveAtOnce: 4
+    SpawnInterval: 2
+    PreWaveDelay: 3
+  Player:
+    MaxHealth: 100
+    DamageCooldown: 0.5
+    RestoreHealthOnRestart: 1
+    RestoreAmmoOnRestart: 1
+  DefaultXPPerKill: 15
+  Restart:
+    LayoutSeedPolicy: 0
+  MaxActiveEnemies: 6

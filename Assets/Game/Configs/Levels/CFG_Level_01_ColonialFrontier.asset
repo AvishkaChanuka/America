@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c485d518af113b54e9eb05cd41e2fb61, type: 3}
+  m_Name: CFG_Level_01_ColonialFrontier
+  m_EditorClassIdentifier: Assembly-CSharp::AmericanBattlefront.Core.LevelConfig
+  LevelId: level_01_colonial
+  DisplayName: Colonial Frontier (1675)
+  HistoricalPeriod: "King Philip's War (1675\u20131676)"
+  DateRange: "1675\u20131676"
+  Location: New England Woodland Settlement
+  ShortBriefing: Defend the colonial settlement outskirts amidst dense New England
+    woodland and timber palisades.
+  ObjectiveText: Survive the enemy waves and defend the settlement outskirts
+  ControlHelp: 'Trigger: fire  |  Grip: reload  |  Take cover behind palisades'
+  HistoricalNotes: King Philip's War (1675-1676) was fought between English colonists
+    and the Wampanoag-led coalition. The Wampanoag people, led by Metacom (called
+    King Philip by colonists), resisted colonial expansion. Both sides suffered devastating
+    losses. This is depicted as a defensive skirmish only.
+  SourceNotes: Lepore, Jill. "The Name of War" (1998). Schultz & Tougias, "King Philip's
+    War" (1999).
+  PanoramaMaterial: {fileID: 2100000, guid: eba9add794340fd44b55e56ed02cbc32, type: 2}
+  PanoramaRotation: 0
+  PanoramaExposure: 1
+  Arena:
+    ArenaPrefab: {fileID: 8000770295148407310, guid: 6645ffcac46928840b63cb0fd88a898b, type: 3}
+    PlayerStartPosition: {x: 0, y: 0, z: 0}
+    ArenaDimensions: {x: 40, y: 40}
+  Seed: 75
+  MaxAttemptsPerProp: 30
+  MaxTotalProps: 20
+  Props:
+  - Prefab: {fileID: 1292064069558276688, guid: bd184f45ad134d047adf8205b7044c7a, type: 3}
+    MinCount: 3
+    MaxCount: 6
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2
+    IsNavigationStatic: 1
+  - Prefab: {fileID: 6470734982418527539, guid: 2c5f1838e984e5a49b06fbf980cbf8a2, type: 3}
+    MinCount: 2
+    MaxCount: 4
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2.5
+    IsNavigationStatic: 1
+  - Prefab: {fileID: 5017944565039344103, guid: 052cf21cea5124341a143dad36f19856, type: 3}
+    MinCount: 2
+    MaxCount: 4
+    ScaleRange: {x: 0.9, y: 1.1}
+    MinSeparation: 2
+    IsNavigationStatic: 1
+  ProtectedZones:
+  - Centre: {x: 0, y: 0, z: 0}
+    Radius: 3
+  Weapon:
+    Prefab: {fileID: 9056110576448217076, guid: 4d319132c192f314ba3c03b647aab06a, type: 3}
+    Damage: 25
+    Range: 50
+    FireInterval: 0.5
+    MagazineSize: 8
+    ReserveAmmo: 24
+    ReloadTime: 2.5
+    SpreadAngle: 1
+    HitLayers:
+      serializedVersion: 2
+      m_Bits: 209
+  Enemies:
+  - Prefab: {fileID: 7305952852296998276, guid: 5ea3e3ab96de58148bad44e2080ab156, type: 3}
+    Weight: 0
+    MaxHealth: 50
+    MoveSpeed: 2.5
+    DetectionRange: 15
+    AttackRange: 5
+    AttackDamage: 15
+    AttackCooldown: 2
+    RecoverDuration: 0.5
+    XPReward: 10
+    RequireLineOfSight: 0
+  Waves:
+  - TotalEnemies: 4
+    MaxAliveAtOnce: 3
+    SpawnInterval: 3
+    PreWaveDelay: 2
+  - TotalEnemies: 6
+    MaxAliveAtOnce: 4
+    SpawnInterval: 2.5
+    PreWaveDelay: 3
+  Player:
+    MaxHealth: 100
+    DamageCooldown: 0.5
+    RestoreHealthOnRestart: 1
+    RestoreAmmoOnRestart: 1
+  DefaultXPPerKill: 10
+  Restart:
+    LayoutSeedPolicy: 0
+  MaxActiveEnemies: 6
